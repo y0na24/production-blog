@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    //модульная система
+    "module": "ESNext",
+    //в какую спеку компилировать, чтобы поддерживать большинство браузеров
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    //позволяет использовать esModules для пакетов, которые используют commonjs
+    "esModuleInterop": true,
+    //позволяет использовать дефолтный импорт вместо import * as '...'
+    "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
