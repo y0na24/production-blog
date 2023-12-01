@@ -1,6 +1,6 @@
 type Mods = Record<string, boolean>
 
-export function classNames(cls: string, mods: Mods, additional: string[]): string {
+export function classNames(cls: string, mods: Mods = {}, additional: string[] = []): string {
   const modsEntries = Object.entries(mods)
   const modsResult: string[] = []
 
