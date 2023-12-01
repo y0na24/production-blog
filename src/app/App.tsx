@@ -1,8 +1,6 @@
-import { FC, Suspense } from 'react'
-import { Link, Route, Routes } from 'react-router-dom'
+import { FC } from 'react'
+import { Link } from 'react-router-dom'
 
-import { MainPage } from 'pages/MainPage'
-import { AboutPage } from 'pages/AboutPage'
 import { useTheme } from 'app/providers/ThemeProvider'
 
 import { classNames } from 'shared/lib/classNames/classNames'
@@ -17,24 +15,6 @@ export const App: FC = () => {
       <button onClick={toggleTheme}>Toggle</button>
       <Link to="/">Main</Link>
       <Link to="/about">About</Link>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Suspense fallback="Loading...">
-              <MainPage />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <Suspense fallback="Loading...">
-              <AboutPage />
-            </Suspense>
-          }
-        />
-      </Routes>
     </div>
   )
 }
