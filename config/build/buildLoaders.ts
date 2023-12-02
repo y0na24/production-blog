@@ -1,22 +1,22 @@
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
-import { RuleSetRule } from 'webpack'
-import { BuildOptions } from './types/config'
+import { type RuleSetRule } from 'webpack'
+import { type BuildOptions } from './types/config'
 
-export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
+export function buildLoaders ({ isDev }: BuildOptions): RuleSetRule[] {
   const fileLoader = {
     test: /\.(png|jpe?g|gif|woff2|woff)$/i,
-    use: 'file-loader',
+    use: 'file-loader'
   }
 
   const svgLoader = {
     test: /\.svg$/,
-    use: ['@svgr/webpack'],
+    use: ['@svgr/webpack']
   }
 
   const typescriptLoader = {
     test: /\.tsx?$/,
     use: 'ts-loader',
-    exclude: /node_modules/,
+    exclude: /node_modules/
   }
 
   const stylesLoader = {
@@ -28,12 +28,12 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
         options: {
           modules: {
             auto: (resPath: string) => resPath.includes('.module.'),
-            localIdentName: isDev ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64:8]',
-          },
-        },
+            localIdentName: isDev ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64:8]'
+          }
+        }
       },
-      'sass-loader',
-    ],
+      'sass-loader'
+    ]
   }
 
   return [fileLoader, svgLoader, typescriptLoader, stylesLoader]

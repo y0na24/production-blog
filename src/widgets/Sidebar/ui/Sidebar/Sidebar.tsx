@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { type FC, useState } from 'react'
 import s from './Sidebar.module.scss'
 import { classNames } from 'shared/lib/classNames/classNames'
 
@@ -12,7 +12,7 @@ interface SidebarProps {
 export const Sidebar: FC<SidebarProps> = ({ className }) => {
   const [collapsed, setCollapsed] = useState(false)
 
-  const onToggle = () => {
+  const onToggle = (): void => {
     setCollapsed((prev) => !prev)
   }
 

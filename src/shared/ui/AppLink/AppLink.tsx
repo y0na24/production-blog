@@ -1,5 +1,5 @@
-import { FC, ReactNode } from 'react'
-import { Link, LinkProps } from 'react-router-dom'
+import { type FC, type ReactNode } from 'react'
+import { Link, type LinkProps } from 'react-router-dom'
 
 import { classNames } from 'shared/lib/classNames/classNames'
 
