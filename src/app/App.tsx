@@ -7,14 +7,18 @@ import { Navbar } from 'widgets/Navbar'
 import { classNames } from 'shared/lib/classNames/classNames'
 
 import './styles/index.scss'
+import { Sidebar } from 'widgets/Sidebar'
 
 export const App: FC = () => {
-  const {theme} = useTheme()
+  const { theme } = useTheme()
 
   return (
     <div className={classNames('app', {}, [theme])}>
       <Navbar />
-      <AppRouter />
+      <div className='content-page'>
+        <Sidebar />
+        <AppRouter />
+      </div>
     </div>
   )
 }
