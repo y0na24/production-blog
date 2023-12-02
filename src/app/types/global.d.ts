@@ -14,6 +14,8 @@ declare module '*.svg' {
   export default ReactComponent
 }
 
-declare module "*.png"
-declare module "*.jpg"
-declare module "*.jpeg"
+declare module '*.png'
+declare module '*.jpg'
+declare module '*.jpeg'
+
+declare const __IS_DEV__: boolean
