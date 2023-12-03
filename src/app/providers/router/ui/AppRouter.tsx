@@ -1,6 +1,7 @@
 import { type FC, Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { routeConfig } from 'shared/config/routerConfig/routerConfig'
+import { Loader } from 'shared/ui/Loader'
 
 export const AppRouter: FC = () => {
   return (
@@ -10,9 +11,9 @@ export const AppRouter: FC = () => {
           key={path}
           path={path}
           element={
-            <Suspense>
-              <div className="page-wrapper">{element}</div>
-            </Suspense>
+            <div className="page-wrapper">
+              <Suspense fallback={<Loader />}>{element}</Suspense>
+            </div>
           }
         />
       ))}

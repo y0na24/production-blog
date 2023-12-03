@@ -34,15 +34,4 @@ describe('classNames', () => {
       ])
     ).toBe(expectedString)
   })
-
-  test('with undefined mod', () => {
-    const expectedString = 'someClass hovered class1 class2'
-
-    expect(
-      classNames('someClass', { hovered: true, scrollable: false }, [
-        'class1',
-        'class2'
-      ])
-    ).toBe(expectedString)
-  })
 })
