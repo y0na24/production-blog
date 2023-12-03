@@ -18,11 +18,11 @@
     "esModuleInterop": true,
     //позволяет использовать дефолтный импорт вместо import * as '...'
     "allowSyntheticDefaultImports": true,
-    "types": ["node"]
+    "types": ["node", "jest"]
   },
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
     }
-  },
+  }
 }
