@@ -1,5 +1,7 @@
 {
   "Тестовый ключ": "Test",
   "Язык": "English",
-  "Страница не найдена": "Page is not found"
+  "Страница не найдена": "Page is not found",
+  "Произошла непредвиденная ошибка": "Some unexpected error happend",
+  "Обновить страницу": "Refresh the page"
 }
