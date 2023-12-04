@@ -3,8 +3,12 @@ import webpack, { type WebpackPluginInstance } from 'webpack'
 import { type BuildOptions } from './types/config'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
-export function buildPlugins ({ paths, isDev }: BuildOptions): WebpackPluginInstance[] {
+export function buildPlugins({
+  paths,
+  isDev
+}: BuildOptions): WebpackPluginInstance[] {
   return [
     new HtmlWebpackPlugin({
       template: paths.html
@@ -17,6 +21,9 @@ export function buildPlugins ({ paths, isDev }: BuildOptions): WebpackPluginInst
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev)
     }),
-    new ReactRefreshWebpackPlugin()
+    new ReactRefreshWebpackPlugin(),
+    new BundleAnalyzerPlugin({
+      openAnalyzer: false
+    })
   ]
 }
