@@ -4,15 +4,24 @@ import s from './Button.module.scss'
 
 export enum ThemeButton {
   CLEAR = 'clear',
+  OUTLINE = 'outline'
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   theme?: ThemeButton
 }
 
-export const Button: FC<ButtonProps> = ({ className, children, theme, ...props }) => {
+export const Button: FC<ButtonProps> = ({
+  className,
+  children,
+  theme,
+  ...props
+}) => {
   return (
-    <button className={classNames(s.Button, {}, [className, s[theme!]])} {...props}>
+    <button
+      className={classNames(s.Button, {}, [className, s[theme!]])}
+      {...props}
+    >
       {children}
     </button>
   )

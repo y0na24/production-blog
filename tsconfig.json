@@ -18,11 +18,12 @@
     "esModuleInterop": true,
     //позволяет использовать дефолтный импорт вместо import * as '...'
     "allowSyntheticDefaultImports": true,
-    "types": ["node", "jest"]
+    "types": ["node", "jest", "@testing-library/jest-dom"]
   },
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
+  "include": ["src", "config", "webpack.config.ts", "./config/jest/jest.config.ts"]
 }
