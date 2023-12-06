@@ -1,6 +1,8 @@
 import type { Preview } from '@storybook/react'
+import { Theme } from 'app/providers/ThemeProvider'
 
-import '../../src/app/styles/themes/normal.scss'
+import { withStyleDecorator } from 'shared/config/storybook/StyleDecorator'
+import { withThemeDecorator } from 'shared/config/storybook/ThemeDecorator'
 
 const preview: Preview = {
   parameters: {
@@ -11,7 +13,8 @@ const preview: Preview = {
         date: /Date$/i
       }
     }
-  }
+  },
+  decorators: [withStyleDecorator, withThemeDecorator(Theme.LIGHT)]
 }
 
 export default preview

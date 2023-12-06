@@ -1,0 +1,1 @@
+export { withThemeDecorator } from './withThemeDecorator'
