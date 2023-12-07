@@ -29,6 +29,7 @@ module.exports = {
     '@typescript-eslint/space-before-function-paren': 'off',
     'i18next/no-literal-string': 2,
     '@typescript-eslint/ban-ts-comment': 'off',
-    'react/display-name': 'off'
+    'react/display-name': 'off',
+    '@typescript-eslint/prefer-includes': 'off'
   }
 }

@@ -1,0 +1,1 @@
+export { withRouterDecorator } from './withRouterDecorator'
