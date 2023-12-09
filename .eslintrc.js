@@ -20,7 +20,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: ['react', 'i18next'],
+  plugins: ['react', 'i18next', 'react-hooks'],
   rules: {
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-floating-promises': 'off',
@@ -30,6 +30,9 @@ module.exports = {
     'i18next/no-literal-string': 2,
     '@typescript-eslint/ban-ts-comment': 'off',
     'react/display-name': 'off',
-    '@typescript-eslint/prefer-includes': 'off'
+    '@typescript-eslint/prefer-includes': 'off',
+    '@typescript-eslint/no-confusing-void-expression': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error'
   }
 }

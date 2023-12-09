@@ -6,7 +6,6 @@ import { Navbar } from 'widgets/Navbar'
 
 import { classNames } from 'shared/lib/classNames/classNames'
 
-import './styles/index.scss'
 import { Sidebar } from 'widgets/Sidebar'
 
 export const App: FC = () => {
