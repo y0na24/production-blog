@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/react'
 import { Theme } from 'app/providers/ThemeProvider'
+import { withLokiDecorator } from 'shared/config/storybook/LokiDecorator/withLokiDecorator'
 import { withRouterDecorator } from 'shared/config/storybook/RouterDecorator'
 
 import { withStyleDecorator } from 'shared/config/storybook/StyleDecorator'
@@ -18,7 +19,8 @@ const preview: Preview = {
   decorators: [
     withStyleDecorator,
     withThemeDecorator(Theme.LIGHT),
-    withRouterDecorator
+    withRouterDecorator,
+    withLokiDecorator
   ]
 }
 
