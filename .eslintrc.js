@@ -33,6 +33,7 @@ module.exports = {
     '@typescript-eslint/prefer-includes': 'off',
     '@typescript-eslint/no-confusing-void-expression': 'off',
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'error'
+    'react-hooks/exhaustive-deps': 'error',
+    '@typescript-eslint/consistent-type-imports': 'off'
   }
 }
