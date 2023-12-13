@@ -25,5 +25,5 @@
       "module": "CommonJS"
     }
   },
-  "include": ["src", "config", "webpack.config.ts", "./config/jest/jest.config.ts"]
+  "include": ["src", "config", "webpack.config.ts", "./config/jest/jest.config.ts", "json-server"]
 }
