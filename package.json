@@ -20,7 +20,8 @@
     "storybook:build": "storybook build -c ./config/storybook",
     "generate:ui:json": "node scripts/generate-visual-json-report.js",
     "generate:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html",
-    "generate:ui:report": "npm run generate:ui:json && npm run generate:ui:html"
+    "generate:ui:report": "npm run generate:ui:json && npm run generate:ui:html",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -84,7 +85,8 @@
     "webpack": "^5.89.0",
     "webpack-bundle-analyzer": "^4.10.1",
     "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.7.4"
+    "webpack-dev-server": "^4.7.4",
+    "husky": "^8.0.0"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
