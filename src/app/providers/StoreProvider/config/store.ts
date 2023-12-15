@@ -1,8 +1,10 @@
 import { type Store, configureStore, combineReducers } from '@reduxjs/toolkit'
 import { counterReducer } from 'entities/Counter/model/slice/counterSlice'
+import { userReducer } from 'entities/User'
 
 export const rootReducer = combineReducers({
-  counter: counterReducer
+  counter: counterReducer,
+  user: userReducer
 })
 
 export function createReduxStore(initialState?: RootState): Store {
