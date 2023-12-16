@@ -16,6 +16,7 @@ const config: StorybookConfig = {
       }
     }
   },
+
   swc: () => ({
     jsc: {
       transform: {

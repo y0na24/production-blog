@@ -8,6 +8,9 @@
   "Главная": "Main",
   "О нас": "About us",
   "Войти": "Login",
+  "Выйти": "Log Out",
   "Введите username": "Write username",
-  "Введите пароль": "Write password"
+  "Введите пароль": "Write password",
+  "Форма авторизации": "Auth Form",
+  "Вы ввели неверные данные": "Uncorrect username or password"
 }

@@ -1,0 +1,1 @@
+export { withStoreDecorator } from './withStoreDecorator'

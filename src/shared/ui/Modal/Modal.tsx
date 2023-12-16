@@ -46,11 +46,11 @@ export const Modal: FC<ModalProps> = ({
     (e: KeyboardEvent): void => {
       if (e.key === 'Escape') {
         if (onClose) {
-          onClose()
+          handleClose()
         }
       }
     },
-    [onClose]
+    [onClose, handleClose]
   )
 
   useEffect(() => {
