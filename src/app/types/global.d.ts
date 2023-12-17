@@ -29,3 +29,6 @@ declare type AppDispatch =
 declare type DeepPartial<T> = {
   [K in keyof T]?: T[K] extends object ? DeepPartial<T[K]> : T[K]
 }
+
+declare type ReduxStoreWithManager =
+  import('app/providers/StoreProvider/config/store').ReduxStoreWithManager
