@@ -11,8 +11,12 @@ import { UserState } from 'entities/User/model/types/user'
 import { CounterState } from 'entities/Counter/model/types/counterState'
 import { LoginState } from 'features/authByUsername/model/types/loginState'
 
-export function createReduxStore(initialState?: RootState): Store {
+export function createReduxStore(
+  initialState?: RootState,
+  asyncReducers?: ReducersMapObject<RootState>
+): Store {
   const staticReducers: ReducersMapObject<RootState> = {
+    ...asyncReducers,
     counter: counterReducer,
     user: userReducer
   }
