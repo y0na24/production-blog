@@ -38,6 +38,8 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/prefer-ts-expect-error': 'off',
     '@typescript-eslint/no-dynamic-delete': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'off'
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/consistent-type-assertions': 'off',
+    '@typescript-eslint/unbound-method': 'off'
   }
 }
