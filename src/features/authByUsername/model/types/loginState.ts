@@ -1,4 +1,4 @@
-export interface LoginState {
+export interface LoginSchema {
   username: string
   password: string
   isLoading: boolean

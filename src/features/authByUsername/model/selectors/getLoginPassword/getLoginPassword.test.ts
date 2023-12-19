@@ -1,10 +1,10 @@
-import { LoginState } from '../../types/loginState'
+import { LoginSchema } from '../../types/loginState'
 import { getLoginPassword } from './getLoginPassword'
 
 describe('getLoginPassword', () => {
   test('password return', () => {
     const state: DeepPartial<RootState> = {
-      loginForm: { password: '123' } as LoginState
+      loginForm: { password: '123' } as LoginSchema
     }
 
     expect(getLoginPassword(state as RootState)).toBe('123')

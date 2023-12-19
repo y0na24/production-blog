@@ -1,11 +1,11 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
-import { User, UserState } from '../types/user'
+import { User, UserSchema } from '../types/user'
 import { USER_LOCALSTORAGE_KEY } from 'shared/constants/localStorage'
 
 const authData =
   JSON.parse(localStorage.getItem(USER_LOCALSTORAGE_KEY) as string) || undefined
 
-const initialState: UserState = {
+const initialState: UserSchema = {
   authData
 }
 

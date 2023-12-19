@@ -1,8 +1,8 @@
 import { createSelector } from 'reselect'
 import { getCounter } from '../getCounter/getCounter'
-import { CounterState } from '../../types/counterState'
+import { CounterSchema } from '../../types/counterState'
 
 export const getCounterValue = createSelector(
   getCounter,
-  (counter: CounterState) => counter.value
+  (counter: CounterSchema) => counter.value
 )

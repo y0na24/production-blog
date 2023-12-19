@@ -1,10 +1,10 @@
-import { LoginState } from '../../types/loginState'
+import { LoginSchema } from '../../types/loginState'
 import { getLoginError } from './getLoginError'
 
 describe('getLoginError', () => {
   test('error return', () => {
     const state: DeepPartial<RootState> = {
-      loginForm: { error: 'error' } as LoginState
+      loginForm: { error: 'error' } as LoginSchema
     }
 
     expect(getLoginError(state as RootState)).toBe('error')

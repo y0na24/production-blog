@@ -22,7 +22,11 @@ const initialReducers: ReducersList = {
   loginForm: loginReducer
 }
 
-const LoginForm: FC = () => {
+interface LoginFormProps {
+  onSuccess: () => void
+}
+
+const LoginForm: FC<LoginFormProps> = ({ onSuccess }) => {
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
   const username = useAppSelector(getLoginUsername)
@@ -38,12 +42,17 @@ const LoginForm: FC = () => {
     dispatch(loginActions.setPassword(value))
   }
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
+  // @ts-ignore
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault()
-
-    dispatch(
+    const result = await dispatch(
       loginByUsername({ username, password }) as unknown as UnknownAction
     )
+
+    // @ts-ignore
+    if (result?.meta?.requestStatus === 'fulfilled') {
+      onSuccess()
+    }
   }
 
   return (

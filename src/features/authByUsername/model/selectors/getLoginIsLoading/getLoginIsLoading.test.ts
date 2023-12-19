@@ -1,10 +1,10 @@
-import { LoginState } from '../../types/loginState'
+import { LoginSchema } from '../../types/loginState'
 import { getLoginIsLoading } from './getLoginIsLoading'
 
 describe('getLoginIsLoading', () => {
   test('isLoading return', () => {
     const state: DeepPartial<RootState> = {
-      loginForm: { isLoading: true } as LoginState
+      loginForm: { isLoading: true } as LoginSchema
     }
 
     expect(getLoginIsLoading(state as RootState)).toBe(true)

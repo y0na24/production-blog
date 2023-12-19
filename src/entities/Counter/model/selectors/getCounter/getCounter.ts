@@ -1,3 +1,3 @@
-import { CounterState } from '../../types/counterState'
+import { CounterSchema } from '../../types/counterState'
 
-export const getCounter = (state: RootState): CounterState => state.counter
+export const getCounter = (state: RootState): CounterSchema => state.counter

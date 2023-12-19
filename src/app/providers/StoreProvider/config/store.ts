@@ -7,9 +7,10 @@ import {
 import { counterReducer } from 'entities/Counter/model/slice/counterSlice'
 import { userReducer } from 'entities/User'
 import { ReducerManager, createReducerManager } from './reducerManager'
-import { UserState } from 'entities/User/model/types/user'
-import { CounterState } from 'entities/Counter/model/types/counterState'
-import { LoginState } from 'features/authByUsername/model/types/loginState'
+import { UserSchema } from 'entities/User/model/types/user'
+import { CounterSchema } from 'entities/Counter/model/types/counterState'
+import { LoginSchema } from 'features/authByUsername/model/types/loginState'
+import { ProfileSchema } from 'entities/Profile'
 
 export function createReduxStore(
   initialState?: RootState,
@@ -36,9 +37,10 @@ export function createReduxStore(
 }
 
 export interface RootState {
-  user: UserState
-  counter: CounterState
-  loginForm?: LoginState
+  user: UserSchema
+  counter: CounterSchema
+  loginForm?: LoginSchema
+  profile?: ProfileSchema
 }
 
 export type RootStateKey = keyof RootState
