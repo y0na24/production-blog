@@ -19,6 +19,7 @@ declare module '*.jpg'
 declare module '*.jpeg'
 
 declare const __IS_DEV__: boolean
+declare const __API__: string
 
 declare type RootState =
   import('app/providers/StoreProvider/config/store').RootState
@@ -29,6 +30,9 @@ declare type AppDispatch =
 declare type DeepPartial<T> = {
   [K in keyof T]?: T[K] extends object ? DeepPartial<T[K]> : T[K]
 }
+
+declare type ThunkExtraArg =
+  import('app/providers/StoreProvider/config/store').ThunkExtraArg
 
 declare type ReduxStoreWithManager =
   import('app/providers/StoreProvider/config/store').ReduxStoreWithManager

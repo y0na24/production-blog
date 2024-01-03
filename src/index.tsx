@@ -11,8 +11,8 @@ import { Suspense } from 'react'
 import { StoreProvider } from 'app/providers/StoreProvider'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <StoreProvider>
-    <BrowserRouter>
+  <BrowserRouter>
+    <StoreProvider>
       <ErrorBoundary
         fallback={
           <Suspense>
@@ -24,6 +24,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <App />
         </ThemeProvider>
       </ErrorBoundary>
-    </BrowserRouter>
-  </StoreProvider>
+    </StoreProvider>
+  </BrowserRouter>
 )

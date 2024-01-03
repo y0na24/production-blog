@@ -10,7 +10,8 @@ const config: Config = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
   globals: {
-    __IS_DEV__: true
+    __IS_DEV__: true,
+    __API__: true
   },
   coveragePathIgnorePatterns: ['/node_modules/'],
   clearMocks: true,
